@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>{{user.displayName}}'s Profile</title>
+    </head>
+    <body>
+        <ul>
+            <li><a href="/">Home</a></li>
+            {{#if isAuth}}
+            <li><a href="/logout">Log Out</a></li>
+            {{else}}
+            <li><a href="/login">Log In</a></li>
+            {{/if}}
+        </ul>
+        <h1>{{user.displayName}}'s Profile</h1>
+
+        <section>
+            <div>
+                Username: {{user.email}}
+            </div>
+            <div>
+                Foursquare Account: <a href="{{url}}">{{url}}</a>
+            </div>
+            <h2>Recent Checkins</h2>
+
+            {{#each checkins}}
+            <h3>{{this.venue}}</h3>
+            <ul>
+                <li>City: {{this.city}}</li>
+                <li>State: {{this.state}}</li>
+                <li>Country: {{this.country}}</li>
+                <li>Category: {{this.category}}</li>
+            </ul>
+            {{/each}}
+        </section>
+    </body>
+</html>

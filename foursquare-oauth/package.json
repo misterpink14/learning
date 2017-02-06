@@ -1,0 +1,19 @@
+{
+  "name": "foursquare-oauth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --debug --ignore app/models/users.json index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "misterpink14",
+  "license": "ISC",
+  "dependencies": {
+    "inert": "^4.1.0",
+    "vision": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

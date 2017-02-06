@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+        <ul>
+            <li><a href="/">Home</a></li>
+            {{#if isAuth}}
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/logout">Log Out</a></li>
+            {{else}}
+            <li><a href="/login">Log In</a></li>
+            {{/if}}
+        </ul>
+
+        <ul>
+        {{#each users}}
+            <li><a href='/profile/{{this.id}}'>{{this.displayName}}</a></li>
+        {{/each}}
+        </ul>
+    </body>
+</html>
