@@ -122,7 +122,7 @@ profileUser(request, reply) {
     }
     else {
 	console.log(Users.loadUsers()[userId].checkin[0]);
-        reply.view('profile', {
+        reply.view('profile-single', {
                 user: Users.loadUsers()[userId],
                 checkins: Users.loadUsers()[userId].checkin[0] });
     }
