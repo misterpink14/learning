@@ -23,12 +23,12 @@
             <h2>Recent Checkins</h2>
 
             {{#each checkins}}
-            <h3>{{this.venue}}</h3>
+            <h3>{{this.venue.name}}</h3>
             <ul>
-                <li>City: {{this.city}}</li>
-                <li>State: {{this.state}}</li>
-                <li>Country: {{this.country}}</li>
-                <li>Category: {{this.category}}</li>
+                <li>City: {{this.venue.location.city}}</li>
+                <li>State: {{this.venue.location.state}}</li>
+                <li>Country: {{this.venue.location.country}}</li>
+                <li>Total user checkins at location: {{this.venue.stats.checkinsCount}}</li>
             </ul>
             {{/each}}
         </section>

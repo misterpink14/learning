@@ -27,7 +27,10 @@ module.exports = [{
 {
     method: 'GET',
     path: '/profile/{id}',
-    handler: AppController.profileUser
+    config: {
+	auth: { mode: 'try', strategy: 'session' }, plugins: { 'hapi-auth-cookie': { redirectTo: false } },
+    	handler: AppController.profileUser
+    }
 },
 {
     method: ['GET', 'POST'],

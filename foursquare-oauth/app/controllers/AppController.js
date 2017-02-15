@@ -39,9 +39,10 @@ const getCheckinData = (token, userID, profile, reply) => {
                 displayName: profile.displayName,
                 email: profile.email,
                 url: profile.url };
+		console.log(checkins);
             reply.view('profile', {
                 user: user,
-                checkins: checkins,
+                checkins: checkinData,
                 isAuth: userID? true : false });
         });
     }).on('error', (e) => { console.error(e); }).end();
@@ -109,6 +110,8 @@ profile(request, reply) {
 
 profileUser(request, reply) {
     const userId = request.params.id;
+	console.log(userId);
+	console.log(request.auth);
     if (request.auth.isAuthenticated && request.auth.credentials.id === userId) {
         return reply.redirect("/profile");
     }
@@ -121,9 +124,9 @@ profileUser(request, reply) {
             reply);
     }
     else {
-	console.log(Users.loadUsers()[userId].checkin[0]);
+	console.log(Users.loadUsers()[userId].checkin[0].venue);
         reply.view('profile-single', {
                 user: Users.loadUsers()[userId],
-                checkins: Users.loadUsers()[userId].checkin[0] });
+                checkins: Users.loadUsers()[userId].checkin });
     }
 } };
