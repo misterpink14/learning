@@ -121,8 +121,9 @@ profileUser(request, reply) {
             reply);
     }
     else {
+	console.log(Users.loadUsers()[userId].checkin[0]);
         reply.view('profile', {
-                user: user,
-                checkins: Users.loadUsers()[userId].checkin });
+                user: Users.loadUsers()[userId],
+                checkins: Users.loadUsers()[userId].checkin[0] });
     }
 } };

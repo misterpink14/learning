@@ -19,7 +19,7 @@ getSessionStrategy() {
     return {
 		password: 'secret_cookie_encryption_password',
 		redirectOnTry: true,
-		isSecure: false,
+		isSecure: true,
         clearInvalid: true
 	};
 },
@@ -31,8 +31,8 @@ getSocialLoginStrategy() {
         password: 'cookie_encryption_password_secure',
         clientId: configSecret.clientId,
         clientSecret: configSecret.clientSecret,
-        isSecure: false,
-		forceHttps: false
+        isSecure: true,
+	forceHttps: true
     };
 }
 
