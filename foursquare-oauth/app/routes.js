@@ -27,7 +27,10 @@ module.exports = [{
 {
     method: 'GET',
     path: '/profile/{id}',
-    handler: AppController.profileUser
+    config: {
+        auth: 'session',
+        handler: AppController.profileUser
+    }
 },
 {
     method: ['GET', 'POST'],

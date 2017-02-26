@@ -121,7 +121,7 @@ profileUser(request, reply) {
             reply);
     }
     else {
-	console.log(Users.loadUsers()[userId].checkin[0]);
+	console.log(Users.loadUsers()[userId].checkin[0].venue);
         reply.view('profile-single', {
                 user: Users.loadUsers()[userId],
                 checkins: Users.loadUsers()[userId].checkin[0] });
