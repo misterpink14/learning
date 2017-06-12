@@ -201,7 +201,7 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
-# Windows shortcuts
-*.lnk
+# Java 
+*.jar
+*.class
 
-# End of https://www.gitignore.io/api/intellij,macos,pycharm,sublimetext,vim,visualstudiocode,linux,windows
