@@ -205,3 +205,12 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/intellij,macos,pycharm,sublimetext,vim,visualstudiocode,linux,windows
+
+
+logs
+project/project
+project/target
+target
+tmp
+dist
+.cache
