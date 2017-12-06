@@ -7,5 +7,5 @@
   (def userName (first args))
   (println (str "Hello " userName "!")))
   ([]
-  (println (str "Hello World!"))))
+  (-main "World")))
   
