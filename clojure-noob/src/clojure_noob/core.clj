@@ -3,9 +3,9 @@
 
 (defn -main
   "I don't do a whole lot ... yet."
-  [& args]
-  (def userName
-    (if (> 0 (count args))
-      "World"
-      (first args)))
+  ([& args]
+  (def userName (first args))
   (println (str "Hello " userName "!")))
+  ([]
+  (println (str "Hello World!"))))
+  
