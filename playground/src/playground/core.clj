@@ -1,0 +1,17 @@
+(ns playground.core
+  (:gen-class))
+
+(defn doit 
+  "Does it"
+  []
+  (def four 0)
+  (let [four 4] (println four))
+  (println four))
+
+
+(defn -main
+  "I don't do a whole lot ... yet."
+  [& args]
+  (println "Hello, World!")
+  (doit))
+
